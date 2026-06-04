@@ -1,0 +1,229 @@
+.about-page {
+  min-height: 100vh;
+  padding: 6rem 2rem 3rem;
+  position: relative;
+}
+
+.about-container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.about-profile-card {
+  text-align: center;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.5rem 2rem 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.about-profile-card:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+.about-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+  overflow: hidden;
+}
+
+.about-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.about-role {
+  font-size: 1rem;
+  color: var(--accent-blue);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about-bio {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.about-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(59, 130, 246, 0.08);
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-card-header svg {
+  color: var(--accent-blue);
+}
+
+.about-card-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.about-edu-item {
+  padding: 0.9rem;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 10px;
+  border-left: 3px solid var(--accent-blue);
+  margin-bottom: 0.75rem;
+}
+
+.about-edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-edu-year {
+  color: var(--accent-blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.about-edu-item h3 {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+
+.about-edu-item p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.about-skill-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-skill-icon {
+  display: flex;
+  align-items: center;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+
+.about-skill-name {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  flex: 1;
+}
+
+.about-skill-level {
+  color: var(--accent-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.about-skill-bar {
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.about-skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-indigo));
+  border-radius: 3px;
+  transition: width 1.2s ease-out;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-page {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-profile-card {
+    padding: 2rem 1.25rem 1.5rem;
+  }
+
+  .about-avatar {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
+
+  .about-name {
+    font-size: 1.6rem;
+  }
+
+  .about-card {
+    padding: 1.25rem;
+  }
+}
